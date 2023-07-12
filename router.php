@@ -56,10 +56,22 @@ class Router
                 switch ($action) {
                     case 'view':
                         $this->controller->view();
-                        break;
-                    // case 'login':
-                    //     $this->controller->loginPage();
-                    //     break;
+                    break;
+                    case 'loginPage':
+                        $this->controller->loginPage();
+                    break;
+                    case 'login':
+                        $this->controller->login($_POST);
+                    break;
+                    case 'loginUserHomepage':
+                        $this->controller->loginUser_homePage();
+                    break;
+                    case 'signupPage':
+                        $this->controller->signupPage();
+                    break;
+                    case 'signUp':
+                        $this->controller->signUp($_POST);
+                    break;
                     case 'artistsUplodpage':
                         $this->controller->artistsUplodepage();
                     break;

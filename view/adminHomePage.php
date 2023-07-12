@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home page</title>
+    <title>Admin Home page</title>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <!-- <form action="/login"> -->
-                <button name="loginBtn">login</button>
-            <!-- </form> -->
-            <!-- <form action="/singUp"> -->
-                <button name="singnupBtn">signUp</button>
-            <!-- </form> -->
-        </nav>
-    </div>
+    <h2>Admin panel</h2>
     <div class="searchdiv">
         <form action="/search" method="POST">
             <input type="search" name="Details" placeholder="Eg: new">
@@ -41,17 +32,5 @@
         <?php endforeach; ?>   
     </div> -->
 </body>
-
-
-<!-- For styleing -->
-
-
-<head>
-    <style>
-        nav {
-    display: flex;
-    justify-content: end;
-}
-    </style>
 </head>
 </html>

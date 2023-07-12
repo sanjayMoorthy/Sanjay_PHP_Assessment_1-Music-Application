@@ -9,7 +9,7 @@ class musicController {
     }
 
     public function view(){
-         require 'view/homePage.php';
+         require 'view/userHomepage.php';
     }
 
 
@@ -61,4 +61,30 @@ class musicController {
         require 'view/homePage.php';
     }
 
+    public function loginPage(){
+        require 'view/login.php';
+    }
+
+    public function loginUser_homePage(){
+        require 'view/loginUserhomePage.php';
+    }
+
+    public function signupPage(){
+        require 'view/signup.php';
+    }
+
+    public function signUp($datas){
+        $userName = $datas['name'];
+        $userEmail = $datas['email'];
+        $userPassword = $datas['password'];
+        $this->projectModel->signUp($userName,$userEmail,$userPassword);
+    }
+
+    public function login($logindetails){
+        // print_r($logindetails);
+        $userEmailid = $logindetails['email'];
+        $usersPassword = $logindetails['password'];
+
+        $this->projectModel->login($userEmailid,$usersPassword);
+    }
 }
